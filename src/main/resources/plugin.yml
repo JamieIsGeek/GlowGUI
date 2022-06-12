@@ -1,0 +1,27 @@
+name: GlowGUI
+version: '${project.version}'
+main: dev.jamieisgeek.glowgui.GlowGUI
+api-version: 1.19
+description: Apply glow effects using a GUI
+depend:
+  - GlowAPI
+commands:
+  glow:
+    usage: /<command>
+    description: Apply glow effects to a player
+    aliases: glowgui
+    permission: glowgui.glow
+
+  glowremove:
+    usage: /<command>
+    description: Remove glow effects from a player
+    aliases: removeglow
+    permission: glowgui.remove
+
+permissions:
+    glowgui.glow:
+        description: Allows the user to apply glow effects to a player
+        default: op
+    glowgui.remove:
+        description: Allows the user to remove glow effects from a player
+        default: op
