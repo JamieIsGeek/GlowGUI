@@ -18,11 +18,6 @@ public class Tools {
         player.sendMessage(ChatColor.GOLD + "Select your glow colour!");
     }
 
-    public void removeGlow(Player player) {
-        player.removePotionEffect(PotionEffectType.GLOWING);
-        player.sendMessage(ChatColor.GREEN + "Removed Glow!");
-    }
-
     private Inventory createInventory(Player player) {
         inv = Bukkit.createInventory(player, 9, ChatColor.GOLD + "Choose a Glow Colour!");
 

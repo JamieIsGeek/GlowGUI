@@ -6,6 +6,7 @@ import org.bukkit.command.Command;
 import org.bukkit.command.CommandExecutor;
 import org.bukkit.command.CommandSender;
 import org.bukkit.entity.Player;
+import org.inventivetalent.glow.GlowAPI;
 
 public class GlowRemove implements CommandExecutor {
     @Override
@@ -14,8 +15,7 @@ public class GlowRemove implements CommandExecutor {
         if(sender instanceof Player) {
             Player player = (Player) sender;
             if(player.hasPermission("glowgui.remove")) {
-                Tools tools = Tools.getTools();
-                tools.removeGlow(player);
+                GlowAPI.setGlowing(player, GlowAPI.Color.NONE, Bukkit.getOnlinePlayers());
             } else {
                 player.sendMessage(ChatColor.RED + "Insufficient permissions!");
             }
